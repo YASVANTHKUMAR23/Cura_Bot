@@ -88,16 +88,6 @@ graph TD
     A4 --> A3[Agent 3: Urgency & Booking]
     A3 --> Output[Final Response]
 
-
-| Layer          | Technology                      |
-| -------------- | ------------------------------- |
-| Orchestration  | LangGraph                       |
-| LLM            | Ollama (Llama 3.2 / OpenBioLLM) |
-| Backend        | FastAPI                         |
-| Database       | Supabase (PostgreSQL + Vector)  |
-| Knowledge Base | ChromaDB (PubMed RAG)           |
-| Validation     | Pydantic                        |
-
 📂 Project Structure
 
 D:/CuraBot/
@@ -156,3 +146,4 @@ POST http://localhost:8000/agent234/chat
   "phone": "+919876543210"
 
 }
+
