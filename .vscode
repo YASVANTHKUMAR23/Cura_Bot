@@ -1,0 +1,21 @@
+# Navigate to CuraBot root
+Set-Location D:\CuraBot
+# Create settings file
+New-Item -ItemType Directory -Path ".vscode" -Force | Out-Null
+
+Set-Content -Path ".vscode/settings.json" -Value @"
+{
+    "python.analysis.extraPaths": [
+        "`${workspaceFolder}",
+        "`${workspaceFolder}/Cura_Bot",
+        "`${workspaceFolder}/api"
+    ],
+    "python.autoComplete.extraPaths": [
+        "`${workspaceFolder}",
+        "`${workspaceFolder}/Cura_Bot",
+        "`${workspaceFolder}/api"
+    ]
+}
+"@ -Encoding UTF8
+
+Write-Host "✅ Settings created! Now reload VS Code window" -ForegroundColor Green

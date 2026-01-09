@@ -1,0 +1,46 @@
+# Define greetings (MUST allow)
+define user greet
+  "hello"
+  "hi"
+  "hey"
+  "good morning"
+  "good evening"
+  "how are you"
+
+define bot greet
+  "Hello! I'm your medical health assistant. How can I help you today?"
+
+# Define medical queries (MUST allow)
+define user ask medical
+  "what is diabetes"
+  "aspirin details"
+  "symptoms of fever"
+  "how to treat headache"
+  "tell me about medicine"
+
+define bot answer medical
+  "Let me help you with that medical information."
+
+# Define off-topic queries (block these)
+define user ask off topic
+  "who is messi"
+  "cricket score"
+  "movie review"
+  "stock price"
+  "political news"
+
+define bot refuse off topic
+  "I'm a medical AI assistant. I can only discuss health-related topics. Ask me about diseases, symptoms, medications, or wellness!"
+
+# Flows
+define flow greeting
+  user greet
+  bot greet
+
+define flow medical_query
+  user ask medical
+  bot answer medical
+
+define flow off_topic
+  user ask off topic
+  bot refuse off topic

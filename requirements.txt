@@ -1,0 +1,31 @@
+# Core Framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-dotenv==1.0.1
+pydantic==2.9.2
+pydantic-settings==2.5.2
+
+# Database
+supabase==2.10.0
+
+# LangChain Ecosystem (Compatible versions)
+langchain==0.3.7
+langchain-core==0.3.22
+langchain-community==0.3.7
+langchain-ollama==0.2.0
+langgraph==0.2.34
+
+# Vector DB & Embeddings
+chromadb==0.5.23
+
+# LLM Providers
+openai==1.54.5
+
+# Utilities
+requests==2.32.3
+twilio==9.3.7
+pytest==8.3.4
+
+# AI Safety & Bio
+nemoguardrails==0.10.1
+biopython==1.84
