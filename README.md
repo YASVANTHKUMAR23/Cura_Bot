@@ -77,24 +77,8 @@ All medical reasoning is grounded in **PubMed-backed knowledge**.
 
 📂 Project Structure
 
-D:/CuraBot/
-├── agents/
-│   ├── orchestrator.py           # Main workflow controller
-│   ├── agent1_general.py         # RAG for general queries
-│   ├── agent2_symptom_triage.py  # Symptom collection (SOCRATES)
-│   ├── agent3_appointment.py     # Urgency & booking
-│   └── agent4_disease_matcher.py # Diagnosis logic
-│
-├── database/
-│   ├── supabase_client.py        # RPC & DB helpers
-│   ├── models.py                 # Pydantic models
-│   └── schema.sql                # Patients, Symptoms, Diseases
-│
-├── knowledge_base/
-│   └── chroma_db/                # Vector store (PubMed)
-│
-└── api/
-    └── main.py                   # FastAPI routes
+<img width="424" height="386" alt="image" src="https://github.com/user-attachments/assets/5ade8c99-a012-462a-83fa-79bed451cf8e" />
+
 
 ⚡ Setup & Run
 1️⃣ Prerequisites
@@ -133,5 +117,6 @@ POST http://localhost:8000/agent234/chat
   "phone": "+919876543210"
 
 }
+
 
 
