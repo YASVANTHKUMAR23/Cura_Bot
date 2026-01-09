@@ -64,29 +64,16 @@ All medical reasoning is grounded in **PubMed-backed knowledge**.
 - Backed by **Supabase PostgreSQL**.
 
 
+🛠️ Tech Stack
 
-## 🏗️ System Architecture
-
-```mermaid
-graph TD
-    User[User Input] --> API[FastAPI Endpoint]
-    API --> Orch[Orchestrator]
-    Orch --> Safety[Safety & Emergency Check]
-    
-    Safety -- Unsafe --> Alert[Emergency Response]
-    Safety -- Safe --> Router{Intent Router}
-    
-    Router -- General Query --> A1[Agent 1: RAG / General]
-    Router -- Symptoms --> A2[Agent 2: Triage]
-    
-    A2 -- Collected Symptoms --> DB[(Supabase Logs)]
-    DB --> Logic{Threshold Check}
-    
-    Logic -- Enough Data --> A4[Agent 4: Disease Matcher]
-    Logic -- Need More --> A2
-    
-    A4 --> A3[Agent 3: Urgency & Booking]
-    A3 --> Output[Final Response]
+| Layer          | Technology                      |
+| -------------- | ------------------------------- |
+| Orchestration  | LangGraph                       |
+| LLM            | Ollama (Llama 3.2 / OpenBioLLM) |
+| Backend        | FastAPI                         |
+| Database       | Supabase (PostgreSQL + Vector)  |
+| Knowledge Base | ChromaDB (PubMed RAG)           |
+| Validation     | Pydantic                        |
 
 📂 Project Structure
 
@@ -146,4 +133,5 @@ POST http://localhost:8000/agent234/chat
   "phone": "+919876543210"
 
 }
+
 
