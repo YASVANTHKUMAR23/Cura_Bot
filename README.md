@@ -88,7 +88,6 @@ graph TD
     A4 --> A3[Agent 3: Urgency & Booking]
     A3 --> Output[Final Response]
 
-🛠️ Tech Stack
 
 | Layer          | Technology                      |
 | -------------- | ------------------------------- |
@@ -155,4 +154,5 @@ POST http://localhost:8000/agent234/chat
 {
   "message": "High fever, headache, body ache",
   "phone": "+919876543210"
+
 }
