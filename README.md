@@ -93,7 +93,7 @@ ollama serve
 Supabase account (Free tier works)
 
 2️⃣ Installation
-git clone https://github.com/yourusername/curabot.git
+git clone https://github.com/YASVANTHKUMAR23/Cura_Bot.git
 cd curabot
 pip install -r requirements.txt
 
@@ -117,6 +117,7 @@ POST http://localhost:8000/agent234/chat
   "phone": "+919876543210"
 
 }
+
 
 
 
